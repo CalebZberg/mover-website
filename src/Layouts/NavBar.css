@@ -14,6 +14,18 @@
     font-weight: 1000;
     transition: color 0.3s;
   }
+
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .logo:hover {
+    color: var(--accent-color);
+  }
   
   .navbar-container {
     max-width: 100%;
@@ -32,11 +44,7 @@
     padding: 0 1rem;  /* adjust horizontal padding as desired */
   }
   
-  
-  .logo-img {
-    /* Slightly larger logo */
-    height: 50px;
-  }
+
   
   .nav-links {
     list-style: none;

@@ -1,24 +1,25 @@
-// src/context/AuthContext.jsx
 import React, { createContext, useState } from 'react';
 
-export const AuthContext = createContext(null);
+export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
+  const [isAuthenticated, setAuth] = useState(false);
 
-  // login just sets a dummy user object
-  const login = email => {
-    setUser({ email });
+  // stubbed login/logout
+  const login = (cb) => {
+    // simulate async with a macrotask
+    setTimeout(() => {
+      setAuth(true);
+      cb?.();
+    }, 500);
   };
-
-  const logout = () => {
-    setUser(null);
+  const logout = (cb) => {
+    setAuth(false);
+    cb?.();
   };
-
-  const isAuthenticated = Boolean(user);
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, isAuthenticated }}>
+    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

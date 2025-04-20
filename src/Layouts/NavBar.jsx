@@ -18,8 +18,9 @@ export default function NavBar() {
       <div className="container navbar-container">
         {/* Logo */}
         <Link to="/" className="logo">
-          <img src="/assets/logo.png" alt="Bubs Movers" className="logo-img" />
+          Bub’s Movers
         </Link>
+
 
         {/* Hamburger toggle */}
         <input
