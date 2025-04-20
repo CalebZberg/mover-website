@@ -1,7 +1,6 @@
 /* NavBar.css – Updated for taller header */
 
 .navbar {
-    position: fixed;
     top: 0; left: 0; right: 0;
     padding: 1rem 1rem;
     background: var(--primary-color);
@@ -9,16 +8,30 @@
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
+
+  .Logo-Name {
+    color: var(--text-light);
+    font-weight: 1000;
+    transition: color 0.3s;
+  }
   
   .navbar-container {
+    max-width: 100%;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
     /* Increased vertical padding for a taller header */
     padding: 1.5rem 1rem;
   }
+
+  /* Override the global .container only within the navbar */
+  .navbar > .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 1rem;  /* adjust horizontal padding as desired */
+  }
+  
   
   .logo-img {
     /* Slightly larger logo */
@@ -88,4 +101,5 @@
       text-align: center;
     }
   }
+  
   

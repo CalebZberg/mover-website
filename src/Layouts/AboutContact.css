@@ -1,28 +1,96 @@
 /* AboutContact.css – About us & contact form */
 
-.about-section {
-    background: #fff;
-  }
-  .about-section p {
-    max-width: 800px;
-    margin: 0 auto 1rem;
-    line-height: 1.5;
-  }
-  
-  .contact-section .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .contact-section input,
-  .contact-section textarea {
-    padding: 0.8em;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-  }
-  .contact-section .btn {
-    align-self: flex-start;
-  }
-  
+/* Our Story */
+.about-story h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.about-story p {
+  max-width: 600px;    /* narrow for comfortable reading */
+  margin: 0 auto 1.5rem; /* auto left/right centers it */
+  line-height: 1.6;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;    /* titles and headings stay flush left */
+}
+
+/* Our Values */
+.about-values {
+  margin-top: 2rem;
+}
+.about-values h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.about-values ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;      /* centers the list block */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem 2rem;
+}
+.about-values li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+.about-values li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Contact Form */
+.contact-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+}
+.contact-form .btn {
+  align-self: flex-start;
+  padding: 0.75rem 2rem;
+}
+.contact-form .btn:hover {
+  background: #cf6e1a;
+}

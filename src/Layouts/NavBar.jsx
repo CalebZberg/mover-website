@@ -8,9 +8,11 @@ export default function NavBar() {
   return (
     <header className="navbar">
       <div className="container navbar-container">
-        <Link to="/" className="logo">
-          <img src="/assets/logo.png" alt="Bubs Movers" className="logo-img" />
-        </Link>
+        <div className="Logo-Name">
+            Bubs Movers
+        </div>
+        
+        
 
         <input 
           type="checkbox" 
