@@ -1,9 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import NavBar      from './Layouts/NavBar.jsx';
-import Footer      from './Layouts/Footer.jsx';
+import NavBar       from './Layouts/NavBar.jsx';
+import Footer       from './Layouts/Footer.jsx';
 import HomeServices from './Layouts/HomeServices.jsx';
+import Services     from './Layouts/Services.jsx';      // ← new
 import Quote        from './Layouts/Quote.jsx';
 import Reviews      from './Layouts/Reviews.jsx';
 import Login        from './Layouts/Login.jsx';
@@ -19,12 +20,13 @@ export default function App() {
 
       <main>
         <Routes>
-          <Route path="/"       element={<HomeServices />} />
-          <Route path="/quote"  element={<Quote />} />
-          <Route path="/reviews"element={<Reviews />} />
-          <Route path="/login"  element={<Login />} />
-          <Route path="/about"  element={<AboutContact />} />
-          <Route path="*"       element={<NotFound />} />
+          <Route path="/"        element={<HomeServices />} />
+          <Route path="/services" element={<Services />} />   {/* ← new */}
+          <Route path="/quote"   element={<Quote />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/login"   element={<Login />} />
+          <Route path="/about"   element={<AboutContact />} />
+          <Route path="*"        element={<NotFound />} />
         </Routes>
       </main>
 
