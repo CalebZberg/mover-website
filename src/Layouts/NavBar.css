@@ -1,0 +1,91 @@
+/* NavBar.css – Updated for taller header */
+
+.navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: 1rem 1rem;
+    background: var(--primary-color);
+    color: var(--text-light);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Increased vertical padding for a taller header */
+    padding: 1.5rem 1rem;
+  }
+  
+  .logo-img {
+    /* Slightly larger logo */
+    height: 50px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li a {
+    color: var(--text-light);
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: var(--accent-color);
+  }
+  
+  .quote-link {
+    background: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  
+  /* Hamburger toggle */
+  .menu-toggle {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .menu-icon span {
+    display: block;
+    width: 25px;
+    height: 4px;              /* slightly thicker bars */
+    background: var(--text-light);
+    margin: 6px 0;            /* more space between bars */
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive nav */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%; /* sits right below the taller header */
+      left: 0; right: 0;
+      background: var(--primary-color);
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+    .nav-links.open {
+      display: flex;
+    }
+    .nav-links li {
+      text-align: center;
+    }
+  }
+  

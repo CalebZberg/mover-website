@@ -1,0 +1,18 @@
+/* NotFound.css – 404 page */
+
+.notfound-section {
+    background: #fff;
+  }
+  .notfound-section .container {
+    text-align: center;
+  }
+  .notfound-section h2 {
+    margin-bottom: 1rem;
+  }
+  .notfound-section p {
+    margin-bottom: 1.5rem;
+  }
+  .notfound-section .btn {
+    margin-top: 1rem;
+  }
+  

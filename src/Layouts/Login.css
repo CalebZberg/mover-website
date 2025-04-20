@@ -1,0 +1,22 @@
+/* Login.css – Login form */
+
+.login-section {
+    background: #fff;
+  }
+  .login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .login-form input {
+    padding: 0.8em;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+  .login-form .btn {
+    width: 100%;
+  }
+  

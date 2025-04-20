@@ -1,0 +1,37 @@
+/* Quote.css – Get a Quote form */
+
+.quote-section {
+    background: #fff;
+  }
+  .quote-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .quote-form .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .quote-form .fields input,
+  .quote-form .fields textarea {
+    flex: 1 1 48%;
+    padding: 0.8em;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+  .quote-form .fields textarea {
+    flex: 1 1 100%;
+    height: 100px;
+  }
+  .quote-form .btn {
+    margin-top: 1rem;
+  }
+  @media (max-width: 600px) {
+    .quote-form .fields input,
+    .quote-form .fields textarea {
+      flex: 1 1 100%;
+    }
+  }
+  

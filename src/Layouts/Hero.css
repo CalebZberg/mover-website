@@ -1,0 +1,36 @@
+/* Hero.css – Hero banner section */
+
+.hero-section {
+    position: relative;
+    background: url('../images/hero.jpg') no-repeat center/cover;
+    color: var(--text-light);
+    text-align: center;
+    padding: 6rem 1rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .cta-button {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  

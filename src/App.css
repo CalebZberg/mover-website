@@ -1,38 +1,99 @@
-.App {
+/* App.css – Global styles, variables, layout, typography, buttons, footer */
+
+/* 1) Color & font variables */
+:root {
+  --primary-color: #2C3E50;
+  --accent-color:  #E67E22;
+  --bg-light:      #F9F9F9;
+  --text-color:    #333;
+  --text-light:    #FFF;
+  --border-color:  #DDD;
+  --font-base:     'Open Sans', sans-serif;
+}
+
+/* 2) Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--font-base);
+  color: var(--text-color);
+  background: var(--bg-light);
+  line-height: 1.6;
+  padding-top: 60px; /* space for fixed header */
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+}
+p { margin-bottom: 1em; }
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover { color: var(--accent-color); }
+
+/* 3) Layout helpers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+section {
+  padding: 4rem 1rem;
+}
+.section-title {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 4) Sticky footer layout */
+html { min-height: 100%; }
+body { display: flex; flex-direction: column; }
+main { flex: 1; }
+
+/* 5) Buttons */
+.btn, button {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--accent-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 4px;
+  padding: 0.6em 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn:hover, button:hover {
+  background: #cf6e1a;
+  transform: translateY(-2px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 6) Section‑card wrappers */
+.section-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.appPage {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+footer {
+  margin-top: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* End of App.css */

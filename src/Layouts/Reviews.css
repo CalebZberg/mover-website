@@ -1,0 +1,36 @@
+/* Reviews.css – Customer testimonials */
+
+.reviews-section {
+    background: var(--bg-light);
+  }
+  .reviews-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  .review-card {
+    background: #fff;
+    flex: 1 1 calc(30% - 1rem);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .stars {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+  }
+  .review-text {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  .review-author {
+    text-align: right;
+    font-weight: 600;
+  }
+  @media (max-width: 768px) {
+    .review-card {
+      flex: 1 1 100%;
+    }
+  }
+  

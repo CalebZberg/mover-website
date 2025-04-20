@@ -1,0 +1,15 @@
+/* HomeServices.css – Styles for the final CTA on home page */
+
+.cta-section.section-card {
+    background: #fff;
+  }
+  .cta-section .container {
+    text-align: center;
+  }
+  .cta-section h2 {
+    margin-bottom: 1rem;
+  }
+  .cta-section p {
+    margin-bottom: 1.5rem;
+  }
+  
