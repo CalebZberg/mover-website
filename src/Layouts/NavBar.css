@@ -1,7 +1,9 @@
 /* NavBar.css – Updated for taller header */
 
 .navbar {
+    position: fixed;
     top: 0; left: 0; right: 0;
+    width: 100%;
     padding: 1rem 1rem;
     background: var(--primary-color);
     color: var(--text-light);
