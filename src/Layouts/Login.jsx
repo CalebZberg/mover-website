@@ -9,17 +9,21 @@ export default function Login() {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setCreds({ ...creds, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    login(() => {
-      setLoading(false);
+    try {
+      await login(creds.user, creds.pass);
       navigate('/quote');
-    });
+    } catch (err) {
+      alert(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
